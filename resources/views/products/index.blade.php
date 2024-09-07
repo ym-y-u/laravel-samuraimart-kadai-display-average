@@ -23,6 +23,9 @@
                         <li class="breadcrumb-item active" aria-current="page">商品一覧</li>
                     </ol>
                 </nav>
+                <span class="samuraimart-star-rating" data-rate="{{ round($recommend_product->reviews->avg('score') * 2) / 2 }}">
+                </span>
+                <br>
                 <h1>"{{ $keyword }}"の検索結果<span class="ms-3">{{ number_format($total_count) }}件</span></h1>
             @else
                 <nav class="mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -67,6 +70,9 @@
                             <div class="col-12">
                                 <p class="samuraimart-product-label mt-2">
                                     <a href="{{ route('products.show', $product) }}" class="link-dark">{{$product->name}}</a>
+                                    <br>
+                                    <span class="samuraimart-star-rating" data-rate="{{ round($product->reviews->avg('score') * 2) / 2 }}">
+                                    </span>
                                     <br>
                                     <label>￥{{ number_format($product->price) }}</label>
                                 </p>

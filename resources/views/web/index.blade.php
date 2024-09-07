@@ -33,7 +33,12 @@
                             <div class="row">
                                 <div class="col-12">
                                     <p class="samuraimart-product-label mt-2">
-                                        <a href="{{ route('products.show', $recommend_product) }}" class="link-dark">{{ $recommend_product->name }}</a>
+                                        <a href="{{ route('products.show', $recommend_product) }}" class="link-dark">
+                                            {{ $recommend_product->name }}
+                                        </a>
+                                        <br>
+                                        <span class="samuraimart-star-rating" data-rate="{{ round($recommend_product->reviews->avg('score') * 2) / 2 }}">
+                                        </span>
                                         <br>
                                         <label>￥{{ number_format($recommend_product->price) }}</label>
                                     </p>
@@ -61,6 +66,9 @@
                                     <p class="samuraimart-product-label mt-2">
                                         <a href="{{ route('products.show', $recently_product) }}" class="link-dark">{{ $recently_product->name }}</a>
                                         <br>
+                                        <span class="samuraimart-star-rating" data-rate="{{ round($recommend_product->reviews->avg('score') * 2) / 2 }}">
+                                        </span>
+                                        <br>
                                         <label>￥{{ number_format($recently_product->price) }}</label>
                                     </p>
                                 </div>
@@ -86,6 +94,9 @@
                                 <div class="col-12">
                                     <p class="samuraimart-product-label mt-2">
                                         <a href="{{ route('products.show', $featured_product) }}" class="link-dark">{{ $featured_product->name }}</a>
+                                        <br>
+                                        <span class="samuraimart-star-rating" data-rate="{{ round($recommend_product->reviews->avg('score') * 2) / 2 }}">
+                                        </span>
                                         <br>
                                         <label>￥{{ number_format($featured_product->price) }}</label>
                                     </p>

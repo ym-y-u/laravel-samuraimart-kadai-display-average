@@ -387,3 +387,60 @@ a img:hover {
 .samuraimart-mypage-link:hover {
   background-color: #f8f9fa;
 }
+
+
+.samuraimart-star-rating {
+  display: block;
+  position: relative;
+  font-size: 1rem;
+}
+.samuraimart-star-rating::before {
+  content: "★★★★★";
+  color: #c1c1c1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.samuraimart-star-rating::after {
+  content: "★★★★★";
+  color: #0fbe9f;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+
+.samuraimart-star-rating[data-rate="5"]::after {
+  width: 5rem;
+}
+.samuraimart-star-rating[data-rate="4.5"]::after {
+  width: 4.5rem;
+}
+.samuraimart-star-rating[data-rate="4"]::after {
+  width: 4rem;
+}
+.samuraimart-star-rating[data-rate="3.5"]::after {
+  width: 3.5rem;
+}
+.samuraimart-star-rating[data-rate="3"]::after {
+  width: 3rem;
+}
+.samuraimart-star-rating[data-rate="2.5"]::after {
+  width: 2.5rem;
+}
+.samuraimart-star-rating[data-rate="2"]::after {
+  width: 2rem;
+}
+.samuraimart-star-rating[data-rate="1.5"]::after {
+  width: 1.5rem;
+}
+.samuraimart-star-rating[data-rate="1"]::after {
+  width: 1rem;
+}
+.samuraimart-star-rating[data-rate="0.5"]::after {
+  width: 0.5rem;
+}
+.samuraimart-star-rating[data-rate="0"]::after {
+  width: 0rem;
+}

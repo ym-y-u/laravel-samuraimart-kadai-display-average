@@ -26,9 +26,16 @@
                         <h1>
                             {{$product->name}}
                         </h1>
+
+                        <span class="samuraimart-star-rating" data-rate="{{ round($product->reviews->avg('score') * 2) / 2 }}">
+                        </span>
+                        <br>
+
                         <p>
                             {{$product->description}}
                         </p>
+
+                        
                     </div>
 
                     <hr class="my-4">
